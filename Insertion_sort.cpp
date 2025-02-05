@@ -1,6 +1,6 @@
 /**
  *    author:  Mohammad Jashim Uddin
- **/
+**/
 #include <iostream>
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -20,29 +20,40 @@ using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node
 int main()
 {
     ll n;
-    cin >> n;
+    cin>>n;
     ll ar[n];
-    for (ll i = 0; i < n; i++)
+    for(ll i=0;i<n;i++)
     {
-        cin >> ar[i];
+        cin>>ar[i];
     }
 
-    // Sorting
-    for (ll i = 1; i < n; i++)
+    for(ll i=1;i<n;i++)
     {
         ll tmp = ar[i];
-        ll j = i - 1;
-        while (j >= 0 && ar[j] > tmp)
+        ll j = i-1;
+        while(j>=0 && ar[j]>tmp)
         {
-            ar[j + 1] = ar[j];
+            ar[j+1] = ar[j];
             j--;
         }
-        ar[j + 1] = tmp;
+        ar[j+1] = tmp;
     }
 
-    for (ll i = 0; i < n; i++)
+    for(ll i=0;i<n;i++)
     {
-        cout << ar[i] << " ";
+        cout<<ar[i]<<" ";
     }
     return 0;
 }
+
+
+
+
+
+
+// Best case (O(n)):
+// This occurs when the input array is already sorted, where only a single comparison is needed for each element. 
+// Average case (O(n^2)):
+// In most scenarios, the algorithm will need to compare each element with a significant number of previous elements, leading to a quadratic time complexity. 
+// Worst case (O(n^2)):
+// This happens when the input array is in reverse order, requiring the maximum number of comparisons for each element. 

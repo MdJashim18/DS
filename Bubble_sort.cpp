@@ -48,3 +48,13 @@ int main()
     cout << endl;
     return 0;
 }
+
+
+
+
+
+
+// The time complexity of the bubble sort algorithm is O(n^2) in the worst case, O(n) in the best case, and O(n^2) on average: 
+// Worst case: The worst-case time complexity is O(n^2) when the array elements are in decreasing order. 
+// Best case: The best-case time complexity is O(n) when the array is already sorted. 
+// Average case: The average time complexity is O(n^2)

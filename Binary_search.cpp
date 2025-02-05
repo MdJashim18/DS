@@ -57,3 +57,7 @@ int main()
     }
     return 0;
 }
+
+
+
+// The time complexity of the binary search algorithm is \(O(\log n)\), where \(n\) is the number of elements in the array. This is much faster than linear search, which has a time complexity of \(O(n)\)

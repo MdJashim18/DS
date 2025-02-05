@@ -17,11 +17,11 @@ typedef long long ll;
 template <typename T>
 using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
+
 ll partition(ll arr[], ll low, ll high)
 {
-    ll pivot = arr[high]; 
+    ll pivot = arr[high];
     ll i = low - 1;
-
     for (ll j = low; j < high; j++)
     {
         if (arr[j] < pivot)
@@ -40,11 +40,11 @@ void quickSort(ll arr[], ll low, ll high)
     if (low < high)
     {
         ll pi = partition(arr, low, high);
-
-        quickSort(arr, low, pi - 1);  
-        quickSort(arr, pi + 1, high); 
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
     }
 }
+
 
 int main()
 {
@@ -58,10 +58,16 @@ int main()
 
     // Sorting
     quickSort(ar, 0, n - 1);
-
     for (ll i = 0; i < n; i++)
     {
         cout << ar[i] << " ";
     }
     return 0;
 }
+
+
+
+// The time complexity of the Quick Sort algorithm is O(n log n) on average and O(n^2) in the worst case: 
+// Best-case time complexity: O(n log n)
+// Average-case time complexity: O(n log n)
+// Worst-case time complexity: O(n^2)

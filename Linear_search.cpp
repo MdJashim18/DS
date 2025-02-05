@@ -47,3 +47,7 @@ int main()
     }
     return 0;
 }
+
+
+
+// The time complexity of a linear search algorithm is O(n), meaning the time it takes to search increases linearly with the size of the input data (n) where n represents the number of elements in the list being searched
